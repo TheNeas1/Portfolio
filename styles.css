@@ -1,188 +1,211 @@
 /* Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
-  }
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  h1, h2, h3 {
-    font-weight: 600;
-    padding: 10px 10px;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  margin: 0; /* Retire les marges par défaut de tous les éléments */
+  padding: 0; /* Retire les espacements par défaut de tous les éléments */
+  box-sizing: border-box; /* Assure que les bordures et les espacements sont inclus dans la largeur totale des éléments */
+}
+body {
+  font-family: "Poppins", sans-serif; /* Définit la police de base */
+  color: #333; /* Définit la couleur du texte */
+  line-height: 1.6; /* Définit la hauteur de ligne pour une meilleure lisibilité */
+}
 
-  p {
-    padding: 20px 0px;
-  }
-  
-  /* Header Styles */
-  header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: #fff;
-    padding: 20px 20px;
-    text-align: center;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-  }
+.runaway-btn {
+  cursor: pointer;
+  position: flex;;
+}
+
+.runaway-btn:hover {
+  background: #ffd700;
+}
+
+.container {
+  width: 90%; /* La largeur est de 90% de l'écran */
+  max-width: 1200px; /* Limite la largeur maximale à 1200px */
+  margin: 0 auto; /* Centre l'élément horizontalement */
+}
+h1,
+h2,
+h3 {
+  font-weight: 600; /* Définit un poids de police plus épais pour les titres */
+  padding: 10px 10px; /* Ajoute de l'espace autour des titres */
+}
+a {
+  text-decoration: none; /* Retire le soulignement des liens */
+  color: inherit; /* Hérite de la couleur du parent pour les liens */
+}
+p {
+  padding: 20px 0px; /* Ajoute de l'espace en haut et en bas des paragraphes */
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(
+    135deg,
+    #6a11cb,
+    #2575fc
+  ); /* Gradient de couleur en fond */
+  color: #fff; /* Définit la couleur du texte en blanc */
+  padding: 20px 20px; /* Ajoute de l'espace autour du header */
+  text-align: center; /* Centre le texte du header */
+}
+nav {
+  display: flex; /* Utilise Flexbox pour l'alignement des éléments dans le nav */
+  justify-content: space-between; /* Espaces égaux entre les éléments du nav */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  padding: 10px 0; /* Ajoute de l'espace au-dessus et en dessous du menu */
+}
+nav ul {
+  list-style: none; /* Retire les puces des éléments de liste */
+  display: flex; /* Utilise Flexbox pour aligner les éléments de la liste horizontalement */
+  gap: 20px; /* Espace entre les éléments de la liste */
+}
+nav ul li a {
+  color: #fff; /* Définit la couleur des liens du menu en blanc */
+  transition: color 0.3s; /* Ajoute une transition douce au changement de couleur */
+}
+nav ul li a:hover {
+  color: #ffe600; /* Change la couleur des liens au survol */
+}
+
+/* Réduire l'espacement du menu sur petits écrans */
+@media screen and (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    flex-direction: column; /* Passe le menu en colonne sur les petits écrans */
+    gap: 10px; /* Réduit l'espacement entre les éléments du menu */
+    align-items: center; /* Centre les éléments du menu */
   }
   nav ul li a {
-    color: #fff;
-    transition: color 0.3s;
+    font-size: 1.1rem; /* Ajuste la taille de la police des liens sur petits écrans */
   }
-  nav ul li a:hover {
-    color: #ffe600;
-  }
-  .hero {
-    padding: 60px 0;
-  }
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  .hero p {
-    margin-bottom: 20px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ffe600;
-    color: #333;
-    border-radius: 20px;
-    transition: background 0.3s, transform 0.3s;
-  }
-  .btn:hover {
-    background: #ffd700;
-    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0; /* Ajoute de l'espace au-dessus et en dessous de la section hero */
+}
+.hero h1 {
+  font-size: 3rem; /* Définit une grande taille de police pour le titre */
+  margin-bottom: 10px; /* Ajoute de l'espace sous le titre */
+}
+.hero p {
+  margin-bottom: 20px; /* Ajoute de l'espace sous le paragraphe */
+}
+.btn {
+  display: inline-block; /* Affiche le bouton comme un bloc en ligne */
+  padding: 10px 20px; /* Ajoute de l'espace à l'intérieur du bouton */
+  background: #ffe600; /* Définit la couleur de fond du bouton */
+  color: #333; /* Définit la couleur du texte du bouton */
+  border-radius: 20px; /* Arrondit les bords du bouton */
+  transition: background 0.3s, transform 0.3s; /* Ajoute une transition pour la couleur et la transformation */
+}
+.btn:hover {
+  background: #ffd700; /* Change la couleur de fond du bouton au survol */
+  transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+}
+
+/* Section "À propos" */
+#about {
+  padding: 60px 0; /* Ajoute de l'espace au-dessus et en dessous de la section "À propos" */
+  background-color: #f9f9f9; /* Définit la couleur de fond de la section "À propos" */
+  color: #333; /* Définit la couleur du texte */
+}
+
+#about h2 {
+  text-align: center; /* Centre le titre */
+  font-size: 2.5rem; /* Définit une taille de police plus grande pour le titre */
+  margin-bottom: 20px; /* Ajoute de l'espace sous le titre */
+  color: #6a11cb; /* Définit la couleur du titre */
+}
+
+.about-content {
+  display: flex; /* Utilise Flexbox pour la disposition des éléments dans la section "À propos" */
+  justify-content: space-between; /* Espace égal entre les éléments */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  gap: 40px; /* Ajoute un espacement entre les éléments */
+}
+
+.about-text {
+  flex: 1; /* Permet à cette section de prendre toute la largeur disponible */
+  font-size: 1.1rem; /* Définit la taille de la police */
+  line-height: 1.8; /* Définit l'interligne pour améliorer la lisibilité */
+  color: #555; /* Définit la couleur du texte */
+}
+
+.about-text p {
+  margin-bottom: 15px; /* Ajoute de l'espace sous chaque paragraphe */
+}
+
+
+/* Responsiveness pour la section "À propos" */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Passe les éléments en colonne sur petits écrans */
+    text-align: center; /* Centre le texte sur petits écrans */
   }
 
-  /* Section "À propos" */
-#about {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  #about h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #6a11cb;
-  }
-  
-  .about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .about-text {
-    flex: 1;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-  }
-  
-  .about-text p {
-    margin-bottom: 15px;
-  }
-  
   .about-image {
-    flex: 0 0 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus de l'image sur petits écrans */
   }
-  
-  .about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsiveness */
-  @media screen and (max-width: 768px) {
-    .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-image {
-      margin-top: 20px;
-    }
-  }
-  
-  
-  /* Section Styles */
-  .section {
-    padding: 60px 0;
-    text-align: center;
-  }
-  .skills-grid, .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  .skill, .project {
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  .skill:hover, .project:hover {
-    transform: translateY(-10px);
-  }
-  .project {
-    position: relative;
-    height: 200px;
-    background: url('https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/base-de-connaissances-github.png') center/cover no-repeat;
-  }
-  .project .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .project:hover .overlay {
-    opacity: 1;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 0; /* Ajoute de l'espace autour de chaque section */
+  text-align: center; /* Centre le texte dans la section */
+}
+.skills-grid,
+.projects-grid {
+  display: grid; /* Utilise une grille pour organiser les compétences et projets */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Crée une grille fluide qui s'adapte à la taille de l'écran */
+  gap: 20px; /* Ajoute de l'espace entre les éléments de la grille */
+}
+.skill,
+.project {
+  background: #f7f7f7; /* Définit la couleur de fond des éléments */
+  padding: 20px; /* Ajoute de l'espace à l'intérieur des éléments */
+  border-radius: 5px; /* Arrondit les coins des éléments */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile autour des éléments */
+  transition: transform 0.3s; /* Ajoute une transition pour le changement de position */
+}
+.skill:hover,
+.project:hover {
+  transform: translateY(-10px); /* L'élément "s'élève" lorsqu'il est survolé */
+}
+.project {
+  position: relative; /* Permet d'ajouter un overlay dessus */
+  height: 200px; /* Définit une hauteur fixe pour les projets */
+  background: url("https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/base-de-connaissances-github.png")
+    center/cover no-repeat; /* Définit une image de fond pour le projet */
+}
+.project .overlay {
+  position: absolute; /* Positionne l'overlay au-dessus du projet */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Définit un fond sombre semi-transparent */
+  color: #fff; /* Définit la couleur du texte en blanc */
+  display: flex; /* Utilise Flexbox pour centrer le contenu de l'overlay */
+  flex-direction: column; /* Organise les éléments verticalement */
+  justify-content: center; /* Centre verticalement le contenu */
+  align-items: center; /* Centre horizontalement le contenu */
+  opacity: 0; /* L'overlay est invisible au départ */
+  transition: opacity 0.3s; /* Ajoute une transition pour l'opacity */
+}
+.project:hover .overlay {
+  opacity: 1; /* Affiche l'overlay au survol */
+}
+
+/* Footer Styles */
+footer {
+  background: #333; /* Définit la couleur de fond du footer */
+  color: #fff; /* Définit la couleur du texte du footer en blanc */
+  text-align: center; /* Centre le texte dans le footer */
+  padding: 10px 0; /* Ajoute de l'espace autour du footer */
+}
+
+
