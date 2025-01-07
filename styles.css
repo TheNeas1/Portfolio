@@ -1,0 +1,188 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+    padding: 10px 10px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  p {
+    padding: 20px 0px;
+  }
+  
+  /* Header Styles */
+  header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  nav ul li a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #ffe600;
+  }
+  .hero {
+    padding: 60px 0;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    margin-bottom: 20px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffe600;
+    color: #333;
+    border-radius: 20px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .btn:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+  }
+
+  /* Section "À propos" */
+#about {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  #about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6a11cb;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  .about-text p {
+    margin-bottom: 15px;
+  }
+  
+  .about-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsiveness */
+  @media screen and (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      margin-top: 20px;
+    }
+  }
+  
+  
+  /* Section Styles */
+  .section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .skill, .project {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  .skill:hover, .project:hover {
+    transform: translateY(-10px);
+  }
+  .project {
+    position: relative;
+    height: 200px;
+    background: url('https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/base-de-connaissances-github.png') center/cover no-repeat;
+  }
+  .project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .project:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
