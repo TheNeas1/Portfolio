@@ -165,7 +165,7 @@ nav ul li a:hover {
 }
 .skill,
 .project {
-  background: #f7f7f7; /* Définit la couleur de fond des éléments */
+  background: #f4f4f4; /* Définit la couleur de fond des éléments */
   padding: 20px; /* Ajoute de l'espace à l'intérieur des éléments */
   border-radius: 5px; /* Arrondit les coins des éléments */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile autour des éléments */
